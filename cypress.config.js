@@ -8,9 +8,9 @@ module.exports = defineConfig({
     },
     chromeWebSecurity: false,
     defaultCommandTimeout: 20000, // Tempo de espera padrão para comandos (em ms)
-    setupNodeEvents(on, config) {
-      // Configurações adicionais podem ser adicionadas aqui
-    },
- 
+    // setupNodeEvents(on, config) {
+    //   // Configurações adicionais podem ser adicionadas aqui
+    // },
   },
+  projectId: 'z4q8x8',
 });
