@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress');
+import { defineConfig } from 'cypress';
 
-module.exports = defineConfig({
+export default defineConfig({
   chromeWebSecurity: false,
   defaultCommandTimeout: 20000, // Tempo de espera padrão para comandos (em ms)
   e2e: {
