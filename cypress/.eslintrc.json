@@ -1,16 +1,35 @@
-{
-    "extends": [
-      "plugin:cypress/recommended"
-    ],
- 
-    "parserOptions": {
-          "sourceType": "module"
-    },
+// .eslintrc.json
 
-    "rules": {
-      "cypress/no-force": "error",
-      "cypress/assertion-before-screenshot": "error",
-      "cypress/no-pause": "error"
-    }
-    
+{
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true,
+      "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+      "ecmaVersion": 12
+  },
+  "rules": {
+      "indent": [
+          "error",
+          2
+      ],
+      "linebreak-style": [
+          "error",
+          "unix"
+      ],
+      "quotes": [
+          "error",
+          "double"
+      ],
+      "semi": [
+          "error",
+          "never"
+      ],
+      "no-trailing-spaces": [
+          "error"
+      ]
   }
+}

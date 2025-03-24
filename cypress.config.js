@@ -10,6 +10,12 @@ module.exports = defineConfig({
       specPattern: "cypress/e2e/**/*.cy.js",
       supportFile: "cypress/support/e2e.js",
     },
+    overrides: [
+      {
+        files: ["cypress.config.js"], // Ignora o arquivo de configuração do Cypress
+        parser: "espree", // Usando o parser padrão para arquivos JS
+      }
+    ],
   },
   projectId: 'z4q8x8',
 });
