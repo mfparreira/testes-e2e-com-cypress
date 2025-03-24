@@ -1,17 +1,19 @@
+import { defineConfig } from "eslint/config";
 import globals from "globals";
-import pluginJs from "@eslint/js";
+import js from "@eslint/js";
 
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-  {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
-  {languageOptions: { globals: {...globals.browser, ...globals.node} }},
-  pluginJs.configs.recommended,
-  
-];
+{
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "requireConfigFile": false
+    }
+}
 
-module.exports = {
-  "parserOptions": {
-    "sourceType": "module"
-  }
-};
+export default defineConfig([
+  { files: ["**/*.{js,mjs,cjs}"] },
+  { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
+  { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: {...globals.browser, ...globals.node} } },
+  { files: ["**/*.{js,mjs,cjs}"], plugins: { js }, extends: ["js/recommended"] },
+]);
+

@@ -7,6 +7,8 @@ module.exports = defineConfig({
     baseUrl: 'https://notes-serverless-app.com', // Altere para a URL do seu projeto
     env: {
       viewportWidthBreakpoint: 768,
+      specPattern: "cypress/e2e/**/*.cy.js",
+      supportFile: "cypress/support/e2e.js",
     },
   },
   projectId: 'z4q8x8',

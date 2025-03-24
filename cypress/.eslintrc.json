@@ -2,6 +2,11 @@
     "extends": [
       "plugin:cypress/recommended"
     ],
+ 
+    "parserOptions": {
+          "sourceType": "module"
+    },
+
     "rules": {
       "cypress/no-force": "error",
       "cypress/assertion-before-screenshot": "error",
